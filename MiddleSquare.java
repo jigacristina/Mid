@@ -11,12 +11,12 @@ package mid;
  */
 public class MiddleSquare implements Generator {
     private long seed;
-    private int lseed;
+    private int lengthseed;
     
 }
 public MiddleSquare(long seed){
     this.seed = seed;
-    this.lseed = String.valueOf(seed).length();
+    this.lengthseed = String.valueOf(seed).length();
 }
 
 @Override

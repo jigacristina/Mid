@@ -11,38 +11,35 @@ package mid;
  */
 public class MiddleSquare implements Generator {
     private long seed;
-    private int lengthSeed;
     
 }
 public MiddleSquare(long seed){
     this.seed = seed;
-    this.lengthSeed = String.valueOf(seed).length();
 }
 
 @Override
 public double next(){
-                int square = seed*seed;
-		
-		System.out.println (square);
-		
-		String squareString = Integer.toString(square);
-		
-		while(squareString.length() < lengthSeed*2)
-		{
-			squareString = 0 + squareString;
-		}
-		
-		int n = (int) Math.pow(10, lengthSeed / 2);
-		int m = (int)Math.pow(10, lengthSeed);
-		
-		square =  square /n % m;
-		
-		if(square == seed)
-		{
-			square = square+1;    
-		}
-		
-		seed = square;
-		System.out.println (seed);
-		return seed/Math.pow(10,lengthSeed);
+               public double next(){
+    int seed2=seed;
+    while (seed2!=0){
+    seed2=seed2/10;
+    int cifre++;
+
+    }
+
+    int primele=pow(10,(cifre/2));
+    int ultimele=pow(10,(cifre));
+   
+    for (i=1; i<=n; i++)
+        {
+        int square = seed*seed;
+        nr = square / primele % ultimele;
+        if (nr == seed){
+        nr = nr+1;
+        }
+        seed=nr;
+        System.out.println (seed);
+	}
+return (double) seed;
+}
 	}

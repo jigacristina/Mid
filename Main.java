@@ -16,6 +16,17 @@ public class Main {
         for (int j = 0; j < 20; j++) {
             System.out.println (md.next());
         }
+         System.out.println ("Default Generator:");
+         DefaultGenerator dg = new DefaultGenerator();
+         for (int j = 0; j < 10; j++) {
+            System.out.println (dg.next());
+        }
+         
+         System.out.println("LCG:");
+         LCG lg = new LCG();
+         for(int i =0; i < 10; i++){
+         System.out.println(lg.next());
+         }
     }
     
 }

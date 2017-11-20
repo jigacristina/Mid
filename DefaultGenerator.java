@@ -25,7 +25,7 @@ public class DefaultGenerator implements Generator{
 	{
 		double min = 0.0f;
                 double max = 1.0f;
-                double random = rand.nextDouble();
+                double random = max * rand.nextDouble();
 		return random;
 	}
 
